@@ -1,3 +1,69 @@
+# StyleGAN2-ADA Demo
+
+This demo showcases the capabilities of a StyleGAN 2 ADA model, particularly models trained on medical OCT datasets. It offers five core functions that allow you to explore and interact with the model in various ways.
+
+![Gradio Interface](gradio.png)
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Core Functions](#core-functions)
+  1. [Generate an Image](#generate-an-image)
+  2. [Morph Two Images (Latent)](#morph-two-images-latent)
+  3. [Morph Two Images (Projection)](#morph-two-images-projection)
+  4. [Generate Variations of an Image](#generate-variations-of-an-image)
+  5. [Project an Image](#project-an-image)
+
+## Introduction
+
+This StyleGAN 2 ADA PyTorch Demo allows you to interact with pre-trained StyleGAN models trained on medical OCT (Optical Coherence Tomography) datasets. It leverages the power of generative adversarial networks (GANs) to create and manipulate synthetic medical images. Below are the five core functions available in this demo.
+
+## Core Functions
+
+### 1. Generate an Image
+
+- Generate a single image from the selected class out of four available classes.
+
+### 2. Morph Two Images (Latent)
+
+- Create a video that morphs between two or more generated images. You can specify the classes in the "Sequence input" field. The morphing is achieved using the latent vectors obtained during image generation.
+
+### 3. Morph Two Images (Projection)
+
+- Similar to the previous function, this feature allows you to create a video that morphs between two or more generated images. You can specify the classes in the "Sequence input" field, and the morphing is achieved by computing projections.
+
+### 4. Generate Variations of an Image
+
+- Generate a video where images of different classes are morphed from an initially generated image of your choice. Specify the sequence input, and the output will be a video showing the gradual transformation between the images.
+
+### 5. Project an Image
+
+- Upload an image, and the demo will project it onto the closest representation within the StyleGAN. This process may take a few minutes depending on the hyperparameter settings.
+
+## Getting Started
+
+To run this demo, please follow these steps:
+
+1. Clone this repository to your local machine.
+2. Ensure you have Python and the required libraries installed.
+3. Download the pre-trained StyleGAN 2 ADA model trained on medical OCT datasets and place it in the "models" folder. Different conditional models compatible with this demo can be found at the creator's Hugging Face profile: [Marcel Huber's Hugging Face Profile](https://huggingface.co/marcelhuber). Make sure that the model you download has the specified name as used in `Demo.ipynb` and `Demo.py` for it to work.
+4. Launch the demo and enjoy exploring the functionalities!
+
+## Usage
+
+- **Step 1:** Choose one of the core functions from the menu.
+- **Step 2:** Depending on the function, provide the necessary inputs, such as class selection or image upload.
+- **Step 3:** Execute the function, and the results will be displayed or generated.
+
+## License
+
+This demo and the underlying pre-trained models are provided under [insert license information here].
+
+## Acknowledgments
+
+We would like to thank the StyleGAN community and the contributors who made this project possible.
+
+Please feel free to contribute, report issues, or provide feedback to help us improve this demo. Enjoy your exploration of StyleGAN2-ADA!
+
 ## StyleGAN2-ADA &mdash; Official PyTorch implementation
 
 ![Teaser image](./docs/stylegan2-ada-teaser-1024x252.png)
